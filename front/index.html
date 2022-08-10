@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>URL Shorten</h1>
+      <p>
+        This is a simple frontend to test a URL Shortening API. <br />
+        URLs are reset periodically.
+      </p>
+      <div class="form">
+        <input type="text" id="input" placeholder="https://www.example.com" />
+        <button id="button">Shorten</button>
+      </div>
+      <p>Recently added urls:</p>
+      <ul id="urls"></ul>
+      <p id="error"></p>
+      <footer><a href="https://github.com/veljkoilic">Made by Veljko Ilic</a></footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
