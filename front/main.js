@@ -6,7 +6,7 @@ fetch("http://localhost:5000/")
     let list = document.getElementById("urls")
     data.forEach(u => {
         console.log(data)
-        list.innerHTML+= `<li> <a href="http://localhost:5000/${u.path}" target='_blank'> http://localhost:5000/${u.path} </a>  Visited: ${u.clicked} times <span class='copy' onclick="copyText('http://localhost:5000/${u.path}')" >Copy</span></li>`
+        list.innerHTML+= `<li> <a href="http://localhost:5000/${u.path}" target='_blank'> http://localhost:5000/${u.path} </a> ${u.url} Visited: ${u.clicked} times <span class='copy' onclick="copyText('http://localhost:5000/${u.path}')" >Copy</span></li>`
     });
   });
 
@@ -33,7 +33,7 @@ async function shortenRequest() {
         console.log(data);
         document.getElementById(
           "urls"
-        ).innerHTML += `<li> <a href="http://localhost:5000/${data.path}" target='_blank'> http://localhost:5000/${data.path} </a> Clicked: ${data.clicked} times <span class='copy' onclick="copyText('http://localhost:5000/${data.path}')" >Copy</span></li>`;
+        ).innerHTML += `<li> <a href="http://localhost:5000/${data.path}" target='_blank'> http://localhost:5000/${data.path} </a> ${data.url} Clicked: ${data.clicked} times <span class='copy' onclick="copyText('http://localhost:5000/${data.path}')" >Copy</span></li>`;
         document.getElementById("error").innerText = "";
       }
       if (data.error) {
